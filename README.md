@@ -58,4 +58,7 @@ Jika total belanja diatas 500.000 akan mendapat diskon 10%
 Andi juga memberikan pesan kepada teman-teman kalau diberi kebebasan untuk menambahkan fitur yang lain apabila masih terdapat fitur yang belum tercover dalam sistem tersebut
 
 # Flowchart
-Flowchart berikut akan menjelaskan bagaimana Aplikasi ini bekerja
+Flowchart berikut ini akan menjelaskan bagaimana Aplikasi ini bekerja
+
+![Diagram self service cashier drawio](https://user-images.githubusercontent.com/72366408/232266928-32c03cbf-7ca1-46ab-aac9-bbd44ecf5687.png)
+

@@ -9,7 +9,7 @@ Jika ada yang berbelanja, begini journey customer dalam membantu orang yang berb
 1. Customer membuat ID transaksi customer berikut:
 Dengan membuat objek dari class 
 
-transct_123 = Transaction()
+   transct_123 = Transaction()
 
 2. Kemudian customer memasukkan nama item, jumlah item, dan harga barang
 Masukkan item yang ingin dibeli.

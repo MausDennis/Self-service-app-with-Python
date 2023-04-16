@@ -1,5 +1,5 @@
 # Background Project
-Andi adalah seorang pemilik supermarket besar di salah satu kota di Indanesia, Andi memiliki rencana untuk melakukan perbaikan proses bisnis, yaitu Andi akan membuat sistem kasir yang self-service di supermarket miliknya. Sehingga customer bisa langsung memasukkan item yang dibeli, jumlah item yang dibeli, dan harga item yang dibeli dan fitur yang lain. Sehingga customer yang tidak berada di kota tersebut bisa membeli barang dari supermarket tersebut Setelah Andi melakukan riset, ternyata Andi memiliki masalah, yaitu Andi rnembutuhkan Programmer untuk membuatkan fitur - fitur agar bisa sistem kasir self-service di supermarket itu bisa berjalan dengan lancar.
+Andi adalah seorang pemilik supermarket besar di salah satu kota di Indonesia, Andi memiliki rencana untuk melakukan perbaikan proses bisnis, yaitu Andi akan membuat sistem kasir yang self-service di supermarket miliknya. Sehingga customer bisa langsung memasukkan item yang dibeli, jumlah item yang dibeli, dan harga item yang dibeli dan fitur yang lain. Sehingga customer yang tidak berada di kota tersebut bisa membeli barang dari supermarket tersebut Setelah Andi melakukan riset, ternyata Andi memiliki masalah, yaitu Andi membutuhkan Programmer untuk membuatkan fitur - fitur agar bisa sistem kasir self-service di supermarket itu bisa berjalan dengan lancar.
 
 # Feature Requirements
 Akhirnya Andi meminta tolong kepada teman-teman selaku programmer Python untuk membuat program yang menyelesaikan problem tersebut.
@@ -54,10 +54,15 @@ check_order(). Dengan ketentuan:
 
 
 6. Setelah melakukan pengecekan, customer bisa menghiting total belanja yang sudah dibeli menggunakan method total_price() dengan ketentuan:
-Jika total belanja diatas 200.000 akan mendapat diskon 5%
-Jika total belanja diatas 300.000 akan mendapat diskon 8%
-Jika total belanja diatas 500.000 akan mendapat diskon 10%
-Andi juga memberikan pesan kepada teman-teman kalau diberi kebebasan untuk menambahkan fitur yang lain apabila masih terdapat fitur yang belum tercover dalam sistem tersebut
+
+   1. Jika total belanja diatas 200.000 akan mendapat diskon 5%
+
+   2. Jika total belanja diatas 300.000 akan mendapat diskon 8%
+
+   3. Jika total belanja diatas 500.000 akan mendapat diskon 10%
+
+  
+   Andi juga memberikan pesan kepada teman-teman kalau diberi kebebasan untuk menambahkan fitur yang lain apabila masih terdapat fitur yang belum tercover dalam sistem tersebut
 
 # Flowchart
 Flowchart berikut ini akan menjelaskan bagaimana Aplikasi ini bekerja
@@ -69,7 +74,7 @@ Flowchart berikut ini akan menjelaskan bagaimana Aplikasi ini bekerja
 
 Pada modul script.py terdapat class Transaction() dengan fungsi-fungsi sebagai berikut:
 
-  1. def __init__(self): Inisialisasi objek transaksi dengan atribut items, yaitu list kosong untuk menyimpan item-item yang akan dibeli.
+  1. def __init__(self): Inisialisasi objek transaksi dengan atribut items, yaitu list dict.
   
   ![def __init__](https://user-images.githubusercontent.com/72366408/232274774-da22fa1d-8ed2-4c2c-aabc-552891ea43e1.png)
 
@@ -77,23 +82,23 @@ Pada modul script.py terdapat class Transaction() dengan fungsi-fungsi sebagai b
   
   ![def add_item](https://user-images.githubusercontent.com/72366408/232275199-f8e338a1-d0ca-4ac2-bacb-433948cf14b1.png)
 
-  3. def update_item_name(self, item, item_baru): Fungsi untuk mengganti nama item pada list items. Parameter: old_name (string): Nama item yang akan diganti. new_name (string): Nama baru untuk item yang akan diganti. Output: Pesan yang memberitahu bahwa nama item sudah berhasil diubah.
+  3. def update_item_name(self, item, item_baru): Fungsi untuk mengganti nama item pada list items. Parameter: item : Nama item yang akan diganti. new_item (string): Nama baru untuk item yang akan diganti. Output: Pesan yang memberitahu bahwa nama item sudah berhasil diubah.
   
   ![def update_item_name](https://user-images.githubusercontent.com/72366408/232275326-318da05b-526e-44a6-82a3-4ead28bcb41f.png)
 
-  4. def update_item_qty(self, item, jumlah_baru)): Fungsi untuk mengganti jumlah item pada list items. Parameter: name (string): Nama item yang ingin diubah jumlahnya. new_qty (int): Jumlah baru untuk item yang ingin diubah. Output: Pesan yang memberitahu bahwa jumlah item sudah berhasil diubah.
+  4. def update_item_qty(self, item, jumlah_baru)): Fungsi untuk mengganti jumlah item pada list items. Parameter: item (string): Item yang ingin diubah jumlahnya. jumlah_baru (int): Jumlah baru untuk item yang ingin diubah. Output: Pesan yang memberitahu bahwa jumlah item sudah berhasil diubah.
   
   ![def update_item_qty](https://user-images.githubusercontent.com/72366408/232275330-f22d698a-9674-4d49-94f8-bef06f20921b.png)
 
-  5. def update_item_price(self, item, harga_baru): Fungsi untuk mengganti harga per item pada list items. Parameter: name (string): Nama item yang ingin diubah harganya. new_price (int): Harga per item yang baru untuk item yang ingin diubah. Output: Pesan yang memberitahu bahwa harga per item sudah berhasil diubah.
+  5. def update_item_price(self, item, harga_baru): Fungsi untuk mengganti harga per item pada list items. Parameter: item (string): Nama item yang ingin diubah harganya. harga_baru (int): Harga per item yang baru untuk item yang ingin diubah. Output: Pesan yang memberitahu bahwa harga per item sudah berhasil diubah.
   
   ![def update_item_price](https://user-images.githubusercontent.com/72366408/232275342-778af785-27a8-4d8f-b79c-69792e985683.png)
 
-  6. def delete_item(self, item): Fungsi untuk menghapus item dari list items. Parameter: name (string): Nama item yang ingin dihapus dari list items. Output: Pesan yang memberitahu bahwa item sudah berhasil dihapus dari list items.
+  6. def delete_item(self, item): Fungsi untuk menghapus item dari list items. Parameter: item (string): Nama item yang ingin dihapus dari list items. Output: keterangan tidak ada yang dibeli.
   
   ![def delete_item](https://user-images.githubusercontent.com/72366408/232275376-6c92e9f2-bf02-4a06-bdef-b8593f2ce46f.png)
 
-  7. def reset_transaction(self): Fungsi untuk menghapus semua item dari list items. Output: Pesan yang memberitahu bahwa semua item sudah berhasil dihapus dari list items.
+  7. def reset_transaction(self): Fungsi untuk menghapus semua item dari list items. Output: keterangan tidak ada yang dibeli.
   
   ![def reset_transaction ](https://user-images.githubusercontent.com/72366408/232275780-b821ed32-28ea-462b-bc41-cc1bd9c56bcf.png)
 
